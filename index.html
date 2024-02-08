@@ -33,193 +33,208 @@
   </div>
   <div class="container">
     <div class="section">
-      <h2>Long-Context Video Chat</h2>
+      <h2>1M Context Needle</h2>
       <hr>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/sN2WM3VwVwM" frameborder="0" allowfullscreen></iframe>
-      <br>
-      <p><b>Below</b>: Video prediction samples for each method with 300 frames conditioned on 36</p>
-      <section id="dmlab" class="bg-light">
-      <nav class="nav justify-content-center nav-tabs" id="dmlab-current-view-ul">
-          <a class="nav-link active" id="tab0" href="javascript: void(0);" onclick="ChangeCurrentView(0, 0);"><h5>TECO (ours)</h5></a>
-          <a class="nav-link" id="tab1" href="javascript: void(0);" onclick="ChangeCurrentView(0, 1);"><h5>Latent FDM</h5></a>
-          <a class="nav-link" id="tab2" href="javascript: void(0);" onclick="ChangeCurrentView(0, 2);"><h5>Perceiver AR</h5></a>
-          <a class="nav-link" id="tab3" href="javascript: void(0);" onclick="ChangeCurrentView(0, 3);"><h5>CW-VAE</h5></a>
-        <a class="nav-link" id="tab4" href="javascript: void(0);" onclick="ChangeCurrentView(0, 4);"><h5>FitVid</h5></a>
-      </nav>
-
-      <div id="dmlab_output_canvas" style="width: 100%; overflow: hidden;">
-        <div style="width: 49%; float: left;">
-          <video id="dmlab_output_video" width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-            <source src="./videos/dmlab/teco.mp4" type="video/mp4"> 
-          </video>
-        </div>
-        <div style="width: 2%;"> </div>
-        <div style="width: 49%; float: right">
-          <video id="dmlab_output_video_3d" width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-            <source src="./videos/dmlab/teco_3d.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      </section>
-
+    </div>
     <br>
-
-    <div class="section">
-      <h2>Minecraft</h2>
-      <hr>
-      <p><b>Below</b>: Video prediction samples of 300 frames conditioned on 144 (action-conditional)</p>
-      <center>
-      <div style="width: 75%">
-            <video width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-          <source src="./videos/comparison/minecraft.mp4" type="video/mp4"> 
-          </video>
-      </div>
-      </center>
-
-      <br>
-      <p><b>Below</b>: Video prediction samples for each method with 300 frames conditioned on 36 (action-conditional)</p>
-      <section id="minecraft" class="bg-light">
-      <nav class="nav justify-content-center nav-tabs" id="minecraft-current-view-ul">
-          <a class="nav-link active" id="tab0" href="javascript: void(0);" onclick="ChangeCurrentView(1, 0);"><h5>TECO (ours)</h5></a>
-          <a class="nav-link" id="tab1" href="javascript: void(0);" onclick="ChangeCurrentView(1, 1);"><h5>Latent FDM</h5></a>
-          <a class="nav-link" id="tab2" href="javascript: void(0);" onclick="ChangeCurrentView(1, 2);"><h5>Perceiver AR</h5></a>
-          <a class="nav-link" id="tab3" href="javascript: void(0);" onclick="ChangeCurrentView(1, 3);"><h5>CW-VAE</h5></a>
-        <a class="nav-link" id="tab4" href="javascript: void(0);" onclick="ChangeCurrentView(1, 4);"><h5>FitVid</h5></a>
-      </ul>
-
-      <center>
-      <div id="minecraft_output_canvas" style="width: 75%;">
-          <video id="minecraft_output_video" width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-            <source src="./videos/minecraft/teco.mp4" type="video/mp4"> 
-          </video>
-      </div>
-      </center>
-      </section>
-
     <br>
-
     <div class="section">
-      <h2>Habitat</h2>
+      <h2>Text-Video Chat</h2>
       <hr>
-      <p><b>Below</b>: Video prediction samples of 300 frames conditioned on 144 (action-conditional)</p>
-      <center>
-      <div style="width: 75%">
-            <video width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-          <source src="./videos/comparison/habitat.mp4" type="video/mp4"> 
-          </video>
-      </div>
-      </center>
-
-      <br>
-      <p><b>Below</b>: Video prediction samples for each method with 300 frames conditioned on 36</p>
-      <section id="habitat" class="bg-light">
-      <nav class="nav justify-content-center nav-tabs" id="habitat-current-view-ul">
-          <a class="nav-link active" id="tab0" href="javascript: void(0);" onclick="ChangeCurrentView(2, 0);"><h5>TECO (ours)</h5></a>
-          <a class="nav-link" id="tab1" href="javascript: void(0);" onclick="ChangeCurrentView(2, 1);"><h5>Latent FDM</h5></a>
-          <a class="nav-link" id="tab2" href="javascript: void(0);" onclick="ChangeCurrentView(2, 2);"><h5>Perceiver AR</h5></a>
-      </ul>
-
-      <center>
-      <div id="habitat_output_canvas" style="width: 75%;">
-          <video id="habitat_output_video" width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-            <source src="./videos/habitat/teco.mp4" type="video/mp4"> 
-          </video>
-      </div>
-      </center>
-      </section>
-
-    <br>
-
-    <div class="section">
-      <h2>Kinetics-600</h2>
-      <hr>
-      <p><b>Below</b>: Video prediction samples of 100 frames conditioned on 20 with top-k sampling (left) and no top-k (right)</p>
       <div style="width: 100%; overflow: hidden;">
-        <div style="width: 49%; float: left;">
-                <video width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-              <source src="./videos/comparison/kinetics_topk.mp4" type="video/mp4"> 
+        <div style="width: 48%; float: left;">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/nPrWo5pEvyk?start=128&end=162" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 48%; float: left;">
+          <img src="./results/video_chat/giraffe.png" width="100%">
+        </div>
+      </div>
+      <!-- <br>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 48%; float: left;">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/mJ0W6xZfweI?start=0&end=60" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 48%; float: left;">
+          <img src="./results/video_chat/basketball.png" width="100%">
+        </div>
+      </div> -->
+      <br>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 48%; float: left;">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/hkbJ75oei18?start=0&end=120" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 48%; float: left;">
+          <img src="./results/video_chat/bike.png" width="100%">
+        </div>
+      </div>
+      <br>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 48%; float: left;">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/liy0afJ8Gzw?start=0&end=168" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 48%; float: left;">
+          <img src="./results/video_chat/cat_dog.png" width="100%">
+        </div>
+      </div>
+      <br>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 48%; float: left;">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/5A9p26ITUeM?start=0&end=238" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 48%; float: left;">
+          <img src="./results/video_chat/apple.png" width="100%">
+        </div>
+      </div>
+      <br>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 48%; float: left;">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/Bq5To-ZH160?start=0&end=300" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 48%; float: left;">
+          <img src="./results/video_chat/car.png" width="100%">
+        </div>
+      </div>
+      <br>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 48%; float: left;">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/Jzqu48uup54" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 48%; float: left;">
+          <img src="./results/video_chat/white_house.png" width="100%">
+        </div>
+      </div>
+      <br>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 48%; float: left;">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/sN2WM3VwVwM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 48%; float: left;">
+          <img src="./results/video_chat/shark.png" width="100%">
+        </div>
+      </div>
+
+    <br>
+    <br>
+
+    <div class="section">
+      <h2>Text-Video Generation</h2>
+      <hr>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 22%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" autoplay loop playsinline muted="">				
+              <source src="./results/video_gen/fireworks.mp4" type="video/mp4"> 
               </video>
+            <center>
+              <div style="width: 95%" class="center-container">
+                <p>Fireworks exploding in the sky</p>
+              </div>
+            </center>
         </div>
-        <div style="width: 2%;"> </div>
-        <div style="width: 49%; float: right;">
-            <video width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-            <source src="./videos/comparison/kinetics_no_topk.mp4" type="video/mp4">
+        <div style="width: 4%;"> </div>
+        <div style="width: 22%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" autoplay loop playsinline muted="">				
+            <source src="./results/video_gen/waves.mp4" type="video/mp4">
             </video>
+            <center>
+              <div style="width: 95%" class="center-container">
+                  <p>Waves crashing against the shore</p>
+              </div>
+            </center>
+        </div>
+        <div style="width: 4%;"> </div>
+        <div style="width: 22%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" autoplay loop playsinline muted="">				
+            <source src="./results/video_gen/street.mp4" type="video/mp4">
+            </video>
+            <center>
+              <div style="width: 95%;" class="center-container">
+                  <p>A bustling street in London with red telephone booths and Big Ben in the background</p>
+              </div>
+            </center>
+        </div>
+        <div style="width: 4%;"> </div>
+        <div style="width: 22%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" autoplay loop playsinline muted="">				
+            <source src="./results/video_gen/mangoes.mp4" type="video/mp4">
+            </video>
+            <center>
+              <div style="width: 95%" class="center-container">
+                  <p>Camera pans left to right on mago slices sitting on a table</p>
+              </div>
+              </center>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 22%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" autoplay loop playsinline muted="">				
+              <source src="./results/video_gen/ball.mp4" type="video/mp4"> 
+              </video>
+            <center>
+              <div style="width: 95%" class="center-container">
+                <p>A ball thown in the air</p>
+              </div>
+            </center>
+        </div>
+        <div style="width: 4%;"> </div>
+        <div style="width: 22%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" autoplay loop playsinline muted="">				
+            <source src="./results/video_gen/flowers.mp4" type="video/mp4">
+            </video>
+            <center>
+              <div style="width: 95%" class="center-container">
+                  <p>Slow motion flower petals falling on the ground</p>
+              </div>
+            </center>
+        </div>
+        <div style="width: 4%;"> </div>
+        <div style="width: 22%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" autoplay loop playsinline muted="">				
+            <source src="./results/video_gen/campfire.mp4" type="video/mp4">
+            </video>
+            <center>
+              <div style="width: 95%;" class="center-container">
+                <p>A burning campire in a forest</p>
+              </div>
+            </center>
+        </div>
+        <div style="width: 4%;"> </div>
+        <div style="width: 22%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" autoplay loop playsinline muted="">				
+            <source src="./results/video_gen/boat_storm.mp4" type="video/mp4">
+            </video>
+            <center>
+              <div style="width: 95%" class="center-container">
+                <p>A boat sailing on a stormy ocean</p>
+              </div>
+              </center>
         </div>
       </div>
 
+    <br>
+    <br>
+
+    <div class="section">
+      <h2>Text-Image Chat</h2>
+      <hr>
+      <img src="./results/image_chat.png" width="90%">
+
+    <br>
+    <br>
+
+    <div class="section">
+      <h2>Text-Image Generation</h2>
+      <hr>
+      <img src="./results/image_gen/set_1.png" width="90%">
+      <img src="./results/image_gen/set_2.png" width="90%">
       <br>
-      <p><b>Below</b>: Video prediction samples for each method with 100 frames conditioned on 20 with top-k sampling (left) and no top-k (right)</p>
-      <section id="kinetics" class="bg-light">
-      <nav class="nav justify-content-center nav-tabs" id="kinetics-current-view-ul">
-          <a class="nav-link active" id="tab0" href="javascript: void(0);" onclick="ChangeCurrentView(3, 0);"><h5>TECO (ours)</h5></a>
-          <a class="nav-link" id="tab1" href="javascript: void(0);" onclick="ChangeCurrentView(3, 1);"><h5>Latent FDM</h5></a>
-          <a class="nav-link" id="tab2" href="javascript: void(0);" onclick="ChangeCurrentView(3, 2);"><h5>Perceiver AR</h5></a>
-      </nav>
-
-      <div id="kinetics_output_canvas" style="width: 100%; overflow: hidden;">
-        <div style="width: 49%; float: left;">
-          <video id="kinetics_output_video" width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-            <source src="./videos/kinetics/teco.mp4" type="video/mp4"> 
-          </video>
-        </div>
-        <div style="width: 2%;"> </div>
-        <div style="width: 49%; float: right">
-          <video id="kinetics_output_video_notopk" width="100%" onended="this.currentTime = 0;" controls="" muted="">				
-            <source src="./videos/kinetics/teco_notopk.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      </section>
-
-      <br>
-
-
-    <script type="text/javascript">
-      var currentViewList = ["teco", "latent_fdm", "perceiver_ar", "cwvae", "fitvid"];
-      var currentView = "teco";
-
-      function ChangeVideo(dataset, idx){ 
-        var method = "";
-        if (idx == 0) {method = "teco";}
-        if (idx == 1) {method = "latent_fdm";}
-        if (idx == 2) {method = "perceiver_ar";}
-        if (idx == 3) {method = "cwvae";}
-        if (idx == 4) {method = "fitvid";}
-
-        var videoB = document.getElementById(dataset + "_output_video");
-        videoB.src = "./videos/" + dataset + "/" + method + ".mp4";
-        // videoB.play();
-
-        if (dataset == "dmlab") {
-          var videoC = document.getElementById(dataset + "_output_video_3d");
-          videoC.src = "./videos/" + dataset + "/" + method + "_3d.mp4";
-          // videoC.play();
-        }
-        if (dataset == "kinetics") {
-          var videoC = document.getElementById(dataset + "_output_video_notopk")
-          videoC.src = "./videos/" + dataset + "/" + method + "_notopk.mp4"
-        }
-      }
-
-      function ChangeCurrentView(dataset_idx, idx){
-        var dataset = "";
-        if (dataset_idx == 0) {dataset = "dmlab";}
-        if (dataset_idx == 1) {dataset = "minecraft";}
-        if (dataset_idx == 2) {dataset = "habitat";}
-        if (dataset_idx == 3) {dataset = "kinetics";}
-
-        var li_list = document.getElementById(dataset + "-current-view-ul").children;
-        for(i = 0; i < li_list.length; i++){
-          li_list[i].className = "nav-link";
-        }
-        li_list[idx].className = "nav-link active";
-        currentView = currentViewList[idx];
-        document.getElementById(dataset + "_output_canvas").style.display = 'block'; 
-
-        ChangeVideo(dataset, idx);
-      }
-	</script>
 
   </div>
 
