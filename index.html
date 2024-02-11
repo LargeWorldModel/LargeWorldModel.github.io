@@ -107,11 +107,11 @@
 <!-- Data figure. -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Autoregressive Prediction on Diverse Videos and Books.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Model Diverse Videos and Books With RingAttention.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
-      <img src="./materials/data.png" alt="Data Mixture" width="800">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 1. Context Extension and Vision-Language Training.</b> Expanding context size from 4K to 1M on books, followed by vision-language training on diverse forms of visual contents of varying lengths. The lower panel shows interactive capabilities in understanding and responding to queries about complex multimodal world.</p>
+      <img src="./materials/data.png" alt="Data Mixture" width="900">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 1. Context Extension and Vision-Language Training.</b> Expanding context size from 4K to 1M on books using RingAttention, followed by vision-language training on diverse forms of visual contents of lengths 32K to 1M. The lower panel shows interactive capabilities in understanding and responding to queries about complex multimodal world.</p>
     </div>
     </div>
     <br><br>
@@ -122,11 +122,11 @@
 <!-- Model figure -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Long Sequence Any-to-Any with RingAttention.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Long Sequence Any-to-Any AR Prediction.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
       <img src="./materials/model.png" alt="Model" width="800">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 2. Any-to-Any Long Sequence Prediction.</b> RingAttention allows us to use a very large context window for training on diverse formats of video-text, text-video, image-text, text-image, pure video, pure image, and pure text.</p>
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 2. Any-to-Any Long Sequence Prediction.</b> RingAttention enables the use of a very large context window for training across diverse formats such as video-text, text-video, image-text, text-image, pure video, pure image, and pure text. See <a href="https://largeworldmodel.github.io/lwm_arxiv.pdf" target="_blank">the LWM paper</a> for key features, including masked sequence packing and loss weighting, which allow effective video-language training.</p>
       </div>
     </div>
     <br><br>
@@ -135,27 +135,72 @@
 <!-- End model figure -->
 
 
-<!-- 1M figure -->
+<!-- 1M Language figure -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Large and Effective One Million-Length Context.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Highly Effective 1M Language Context.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
-      <img src="./materials/single_needle_1M.png" alt="1M fact retrieval" width="800">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 3. Needle retrieval tasks.</b> LWM achieves high accuracy across 1M context size window.</p>
+        <img src="./materials/needle_comparison_baselines_log_linear_mix_rot.png" alt="1M fact retrieval" width="850">
+        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 3. Needle retrieval task.</b> LWM achieves high accuracy across 1M context window and outperforms GPT-4V and Gemini Pro.</p>
       </div>
+      <br>
+      <div style="text-align: center;">
+        <img src="./materials/single_needle_1M.png" alt="1M fact retrieval" width="900">
+        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 4. Needle retrieval task.</b> LWM achieves high accuracy for varying context sizes and positions in the context window.</p>
+      </div>
+      <!-- <div class="image-container" style="display: flex; justify-content: center; gap: 5px;">
+        <div class="image">
+          <img src="./materials/single_needle_1M.png" alt="Image 1" width="200" height="100">
+        </div>
+        <div class="image">
+          <img src="./materials/multi_needle.png" alt="Image 2" width="200" height="100">
+        </div>
+      </div> -->
     </div>
     <br><br>
+  </div>
+</div>
+
+<!-- End 1M Language figure -->
+
+
+<!-- 1M Vision-Language figure -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="white-space: nowrap;">Highly Effective 1M Vision-Language Context.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
       <img src="./materials/long_video_chat_main.png" alt="1M video chat" width="820">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 4. Long video understanding.</b> LWM can answer questions about 1 hour YouTube video.</p>
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 5. Long video understanding.</b> LWM can answer questions about 1 hour YouTube video.</p>
       </div>
     </div>
     <br><br>
   </div>
 </div>
-<!-- End 1M figure -->
+<!-- End 1M Vision-Language figure -->
+
+
+<!-- Image Generation figure -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="white-space: nowrap;">Text-Image Generation.</h2>
+    <div class="content has-text-justified">
+      <div style="text-align: center;">
+      <img src="./materials/image_gen/set_1.png" alt="Fact retrieval" width="800">
+      </div>
+    </div>
+    <div class="content has-text-justified">
+      <div style="text-align: center;">
+      <img src="./materials/image_gen/set_2.png" alt="Fact retrieval" width="800">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 6. Text to Image.</b> LWM generates images based on text prompts, autoregressively.</p>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+<!-- End Image Generation figure -->
+
 
 <!-- Text-Video figure -->
 <div class="columns is-centered has-text-centered">
@@ -261,31 +306,11 @@
 </div>
 <!-- Text-Video figure -->
 
-<!-- Image Generation figure -->
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Text-Image Generation.</h2>
-    <div class="content has-text-justified">
-      <div style="text-align: center;">
-      <img src="./materials/image_gen/set_1.png" alt="Fact retrieval" width="800">
-      </div>
-    </div>
-    <div class="content has-text-justified">
-      <div style="text-align: center;">
-      <img src="./materials/image_gen/set_2.png" alt="Fact retrieval" width="800">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 6. Text to Image.</b> LWM generates images based on text prompts, autoregressively.</p>
-      </div>
-    </div>
-    <br><br>
-  </div>
-</div>
-<!-- End Image Generation figure -->
-
 
 <!-- Short Video Chat figure -->
-<div class="columns is-centered has-text-centered">
+<!-- <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Short-Video-Based Conversation.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Video-Based Conversation (30s - 5min).</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
         <div style="width: 100%; overflow: hidden;">
@@ -312,14 +337,28 @@
     </div>
     <br><br>
   </div>
-</div>
+</div> -->
 <!-- End Short Video Chat figure -->
 
+<!-- Image chat figure -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="white-space: nowrap;">Image Based Conversation.</h2>
+    <div class="content has-text-justified">
+      <div style="text-align: center;">
+      <img src="./materials/image_chat.png" alt="1M video chat" width="820">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 6. Image understanding.</b> LWM can answer questions about images.</p>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+<!-- End image chat figure -->
 
 <!-- Long Video Chat figure -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Long-Video-Based Conversation.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Video Chat Over 1 Hour YouTube Video.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
         <div style="width: 100%; overflow: hidden;">
@@ -341,7 +380,7 @@
             <img src="./materials/long_video_chat_2.png" width="100%">
           </div>
         </div>
-        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 7. Long Video Chat.</b> LWM answers questions about long videos while GPT-4V and Gemini Pro both fail.</p>
+        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 7. Long Video Chat.</b> LWM answers questions about 1 hour long YouTube video even if state-of-the-art commercial models GPT-4V and Gemini Pro both fail.</p>
       </div>
     </div>
     <br><br>
@@ -350,6 +389,24 @@
 <!-- End Short Video Chat figure -->
 
 </div>
+
+<br><br><br><br>
+
+<div class="container">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-8">
+      <!-- <h2 class="title is-3" style="white-space: nowrap;">Video Chat Over 1 Hour YouTube Video.</h2> -->
+      <div class="content has-text-justified">
+        <div style="text-align: center;">
+        <p>
+          Acknowledgments: This page was adopted from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">academic template</a>.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </section>
 
 </body></html>
