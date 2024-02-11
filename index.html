@@ -110,7 +110,7 @@
     <h2 class="title is-3" style="white-space: nowrap;">Autoregressive Prediction on Diverse Videos and Books.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
-      <img src="./materials/data_fig.png" alt="Data Mixture">
+      <img src="./materials/data.png" alt="Data Mixture" width="800">
       <p class="caption" style="width: 100%; text-align: center;"><b>Figure 1. Context Extension and Vision-Language Training.</b> Expanding context size from 4K to 1M on books, followed by vision-language training on diverse forms of visual contents of varying lengths. The lower panel shows interactive capabilities in understanding and responding to queries about complex multimodal world.</p>
     </div>
     </div>
@@ -122,10 +122,10 @@
 <!-- Model figure -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Any to Any Long Sequence Prediction with RingAttention.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Long Sequence Any-to-Any with RingAttention.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
-      <img src="./materials/model.png" alt="Model" width="600" height="500">
+      <img src="./materials/model.png" alt="Model" width="800">
       <p class="caption" style="width: 100%; text-align: center;"><b>Figure 2. Any-to-Any Long Sequence Prediction.</b> RingAttention allows us to use a very large context window for training on diverse formats of video-text, text-video, image-text, text-image, pure video, pure image, and pure text.</p>
       </div>
     </div>
@@ -134,25 +134,28 @@
 </div>
 <!-- End model figure -->
 
-<!-- Fact figure -->
+
+<!-- 1M figure -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
     <h2 class="title is-3" style="white-space: nowrap;">Large and Effective One Million-Length Context.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
-      <img src="./materials/single_needle_1M.png" alt="Fact retrieval" width="700">
+      <img src="./materials/single_needle_1M.png" alt="1M fact retrieval" width="800">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 3. Needle retrieval tasks.</b> LWM achieves high accuracy across 1M context size window.</p>
       </div>
     </div>
+    <br><br>
     <div class="content has-text-justified">
       <div style="text-align: center;">
-      <img src="./materials/multi_needle.png" alt="Fact retrieval" width="700">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 3. Needle retrieval tasks.</b> LWM achieves high accuracy across 1M context size window.</p>
+      <img src="./materials/long_video_chat_main.png" alt="1M video chat" width="820">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 4. Long video understanding.</b> LWM can answer questions about 1 hour YouTube video.</p>
       </div>
     </div>
     <br><br>
   </div>
 </div>
-<!-- End fact figure -->
+<!-- End 1M figure -->
 
 <!-- Text-Video figure -->
 <div class="columns is-centered has-text-centered">
@@ -250,7 +253,7 @@
               </center>
           </div>
         </div>
-        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 4. Text to Video.</b> LWM generates videos based on text prompts, autoregressively.</p>
+        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 5. Text to Video.</b> LWM generates videos based on text prompts, autoregressively.</p>
       </div>
     </div>
     <br><br>
@@ -270,7 +273,7 @@
     <div class="content has-text-justified">
       <div style="text-align: center;">
       <img src="./materials/image_gen/set_2.png" alt="Fact retrieval" width="800">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 5. Text to Image.</b> LWM generates images based on text prompts, autoregressively.</p>
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 6. Text to Image.</b> LWM generates images based on text prompts, autoregressively.</p>
       </div>
     </div>
     <br><br>
@@ -279,48 +282,72 @@
 <!-- End Image Generation figure -->
 
 
-<!-- Video Chat figure -->
+<!-- Short Video Chat figure -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Video-Based Conversation.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Short-Video-Based Conversation.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
         <div style="width: 100%; overflow: hidden;">
-          <div style="width: 48%; float: left;">
-              <iframe width="350" height="250" src="https://www.youtube.com/embed/nPrWo5pEvyk?start=128&end=162" frameborder="0" allowfullscreen></iframe>
+          <div style="width: 35%; float: left;">
+              <iframe src="https://www.youtube.com/embed/hkbJ75oei18?start=0&end=120" frameborder="0" allowfullscreen></iframe>
           </div>
           <div style="width: 2%;"> </div>
-          <div style="width: 48%; float: right;">
-            <img src="./materials/video_chat/giraffe.png" width="100%">
+          <div style="width: 60%; float: right;">
+            <img src="./materials/video_chat_comparison_1.png" width="100%">
           </div>
         </div>
         <br>
         <div style="width: 100%; overflow: hidden;">
-          <div style="width: 48%; float: left;">
-              <iframe width="350" height="250" src="https://www.youtube.com/embed/hkbJ75oei18?start=0&end=120" frameborder="0" allowfullscreen></iframe>
+          <div style="width: 35%; float: left;">
+              <iframe src="https://www.youtube.com/embed/hkbJ75oei18?start=0&end=120" frameborder="0" allowfullscreen></iframe>
           </div>
           <div style="width: 2%;"> </div>
-          <div style="width: 48%; float: right;">
-            <img src="./materials/video_chat/bike.png" width="100%">
+          <div style="width: 60%; float: right;">
+            <img src="./materials/video_chat_comparison_2.png" width="100%">
           </div>
         </div>
-        <br>
-        <div style="width: 100%; overflow: hidden;">
-          <div style="width: 48%; float: left;">
-              <iframe width="350" height="250" src="https://www.youtube.com/embed/liy0afJ8Gzw?start=0&end=168" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div style="width: 2%;"> </div>
-          <div style="width: 48%; float: right;">
-            <img src="./materials/video_chat/cat_dog.png" width="100%">
-          </div>
-        </div>
-        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 6. Video Chat.</b> LWM answers questions about long videos.</p>
+        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 7. Short Video Chat.</b> LWM answers questions about short videos and performs similarly to GPT-4V and Gemini Pro.</p>
       </div>
     </div>
     <br><br>
   </div>
 </div>
-<!-- End Video Chat figure -->
+<!-- End Short Video Chat figure -->
+
+
+<!-- Long Video Chat figure -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="white-space: nowrap;">Long-Video-Based Conversation.</h2>
+    <div class="content has-text-justified">
+      <div style="text-align: center;">
+        <div style="width: 100%; overflow: hidden;">
+          <div style="width: 35%; float: left;">
+              <iframe src="https://www.youtube.com/embed/hkbJ75oei18?start=0&end=120" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div style="width: 2%;"> </div>
+          <div style="width: 60%; float: right;">
+            <img src="./materials/long_video_chat_1.png" width="100%">
+          </div>
+        </div>
+        <br>
+        <div style="width: 100%; overflow: hidden;">
+          <div style="width: 35%; float: left;">
+              <iframe src="https://www.youtube.com/embed/hkbJ75oei18?start=0&end=120" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div style="width: 2%;"> </div>
+          <div style="width: 60%; float: right;">
+            <img src="./materials/long_video_chat_2.png" width="100%">
+          </div>
+        </div>
+        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 7. Long Video Chat.</b> LWM answers questions about long videos while GPT-4V and Gemini Pro both fail.</p>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+<!-- End Short Video Chat figure -->
 
 </div>
 </section>
