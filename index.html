@@ -55,7 +55,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="TODO" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://largeworldmodel.github.io/lwm_arxiv.pdf" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -104,50 +104,20 @@
   </div>
 <!-- End paper abstract -->
 
-<!-- Data figure. -->
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Model Diverse Videos and Books With RingAttention.</h2>
-    <div class="content has-text-justified">
-      <div style="text-align: center;">
-      <img src="./materials/data.png" alt="Data Mixture" width="900">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 1. Context Extension and Vision-Language Training.</b> Expanding context size from 4K to 1M on books using RingAttention, followed by vision-language training on diverse forms of visual contents of lengths 32K to 1M. The lower panel shows interactive capabilities in understanding and responding to queries about complex multimodal world.</p>
-    </div>
-    </div>
-    <br><br>
-  </div>
-</div>
-<!-- End data figure -->
-
-<!-- Model figure -->
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Long Sequence Any-to-Any AR Prediction.</h2>
-    <div class="content has-text-justified">
-      <div style="text-align: center;">
-      <img src="./materials/model.png" alt="Model" width="800">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 2. Any-to-Any Long Sequence Prediction.</b> RingAttention enables the use of a very large context window for training across diverse formats such as video-text, text-video, image-text, text-image, pure video, pure image, and pure text. See <a href="https://largeworldmodel.github.io/lwm_arxiv.pdf" target="_blank">the LWM paper</a> for key features, including masked sequence packing and loss weighting, which allow effective video-language training.</p>
-      </div>
-    </div>
-    <br><br>
-  </div>
-</div>
-<!-- End model figure -->
-
 
 <!-- 1M Language figure -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Highly Effective 1M Language Context.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Fact Retrieval Over 1M Context.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
         <img src="./materials/needle_comparison_baselines_log_linear_mix_rot.png" alt="1M fact retrieval" width="850">
-        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 3. Needle retrieval task.</b> LWM achieves high accuracy across 1M context window and outperforms GPT-4V and Gemini Pro.</p>
+        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 1. Needle retrieval task.</b> LWM achieves high accuracy across 1M context window and outperforms GPT-4V and Gemini Pro.</p>
       </div>
       <br>
       <div style="text-align: center;">
         <img src="./materials/single_needle_1M.png" alt="1M fact retrieval" width="900">
-        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 4. Needle retrieval task.</b> LWM achieves high accuracy for varying context sizes and positions in the context window.</p>
+        <p class="caption" style="width: 100%; text-align: center;"><b>Figure 2. Needle retrieval task.</b> LWM achieves high accuracy for varying context sizes and positions in the context window.</p>
       </div>
       <!-- <div class="image-container" style="display: flex; justify-content: center; gap: 5px;">
         <div class="image">
@@ -168,17 +138,48 @@
 <!-- 1M Vision-Language figure -->
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
-    <h2 class="title is-3" style="white-space: nowrap;">Highly Effective 1M Vision-Language Context.</h2>
+    <h2 class="title is-3" style="white-space: nowrap;">Question Answering Over 1 Hour Video.</h2>
     <div class="content has-text-justified">
       <div style="text-align: center;">
       <img src="./materials/long_video_chat_main.png" alt="1M video chat" width="820">
-      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 5. Long video understanding.</b> LWM can answer questions about 1 hour YouTube video.</p>
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 3. Long video understanding.</b> LWM can answer questions about over 1 hour YouTube video.</p>
       </div>
     </div>
     <br><br>
   </div>
 </div>
 <!-- End 1M Vision-Language figure -->
+
+
+<!-- Model figure -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="white-space: nowrap;">Long Sequence Any-to-Any AR Prediction.</h2>
+    <div class="content has-text-justified">
+      <div style="text-align: center;">
+      <img src="./materials/model.png" alt="Model" width="700">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 4. Any-to-Any Long Sequence Prediction.</b> RingAttention enables the use of a very large context window for training across diverse formats such as video-text, text-video, image-text, text-image, pure video, pure image, and pure text. See <a href="https://largeworldmodel.github.io/lwm_arxiv.pdf" target="_blank">the LWM paper</a> for key features, including masked sequence packing and loss weighting, which allow effective video-language training.</p>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+<!-- End model figure -->
+
+<!-- Data figure. -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="white-space: nowrap;">Modeling Diverse Videos and Books With RingAttention.</h2>
+    <div class="content has-text-justified">
+      <div style="text-align: center;">
+      <img src="./materials/data.png" alt="Data Mixture" width="900">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 5. Context Extension and Vision-Language Training.</b> Expanding context size from 4K to 1M on books using RingAttention, followed by vision-language training on diverse forms of visual contents of lengths 32K to 1M. The lower panel shows interactive capabilities in understanding and responding to queries about complex multimodal world.</p>
+    </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+<!-- End data figure -->
 
 
 <!-- Image Generation figure -->
@@ -363,7 +364,7 @@
       <div style="text-align: center;">
         <div style="width: 100%; overflow: hidden;">
           <div style="width: 35%; float: left;">
-              <iframe src="https://www.youtube.com/embed/hkbJ75oei18?start=0&end=120" frameborder="0" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/NgTV5bxK8Cs" frameborder="0" allowfullscreen></iframe>
           </div>
           <div style="width: 2%;"> </div>
           <div style="width: 60%; float: right;">
@@ -373,7 +374,7 @@
         <br>
         <div style="width: 100%; overflow: hidden;">
           <div style="width: 35%; float: left;">
-              <iframe src="https://www.youtube.com/embed/hkbJ75oei18?start=0&end=120" frameborder="0" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/ZrRMYgws" frameborder="0" allowfullscreen></iframe>
           </div>
           <div style="width: 2%;"> </div>
           <div style="width: 60%; float: right;">
