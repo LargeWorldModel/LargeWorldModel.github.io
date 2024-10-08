@@ -52,7 +52,7 @@
               <a href="https://www.afaust.info/">Aleksandra Faust</a><sup>&loz;</sup>,&nbsp;
             </span>
             <span class="author-block">
-              <a href="https://www.haoliu.ai/">Hao Liu</a><sup>* &loz;</sup>,&nbsp;
+              <a href="https://www.haoliu.ai/">Hao Liu</a><sup>* &loz;</sup>&nbsp;
             </span>
             <ul>
             <sup>&dagger;</sup> UC Berkeley, <sup>&loz;</sup> Google DeepMind
@@ -122,6 +122,187 @@
     </div>
   </div>
 <!-- End paper abstract -->
+<!-- Model figure -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="white-space: nowrap;">Long Sequence Any-to-Any AR Prediction.</h2>
+    <div class="content has-text-justified">
+      <div style="text-align: center;">
+      <img src="./materials/method.png" alt="Model" width="700">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 2. ElasticTok adaptively encodes image and video to variable length outputs based on the complexity of the input data.</b> Single block uses an Encoder-Decoder pipeline with a sampled latent mask. Multi-block extends this with a Block Causal Mask to handle longer video sequences. </p>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+<!-- End model figure -->
+
+<!-- Quant Figure  -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="white-space: nowrap;">Adaptive Tokenization with ElasticTok</h2>
+    <div class="content has-text-justified">
+      <div style="text-align: center;">
+      <img src="./materials/main_quantitative.png" alt="Data Mixture" width="900">
+      <p class="caption" style="width: 100%; text-align: center;"><b>Figure 4. Performance comparison between baseline and ElasticTok on ImageNet and Video.</b> The y-axis shows the percentage of samples that satisfy the reconstruction threshold, while the x-axis represents the percentage of tokens used. (Left) On image, ElasticTok achieves a 3.5x and 1.3x efficiency boost at different target reconstruction thresholds. (Right) On video, ElasticTok shows a 5x and 2.4x improvement over the baseline, maintaining superior performance while using fewer tokens.</p>
+    </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+<!-- End Quant figure -->
+
+<div class="section">
+      <h2 class="title is-3" style="white-space: nowrap; text-align: center">Adaptive Encoding Examples</h2>
+      <hr>
+      <p>
+      Below, we show examples of the adaptive tokenization capabilities of ElasticTok. For each video, ground truth is the left image and reconstruction the right image.
+      The bottom image shows the percentage of tokens used over each frame as the video plays. Typically, simpler scenes, or scenes with less motion will use fewer frames,
+      while larger transitions such as fast motion or scene cuts will result in brief token usage spikes as our model adaptively encodes.
+      </p>
+
+    <div class="section">
+      <h3 class="title is-3" style="white-space: nowrap; text-align: center">Short Video</h3>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/short/000000000_t01.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/short/000000001_t01.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/short/000000002_t02.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/short/000000003_t02.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/short/000000004_t01.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/short/000000005_t02.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/short/000000008_t01.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/short/000000009_t02.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/short/000000010_t02.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/short/000000012_t02.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/short/000000013_t02.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/short/000000015_t01.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
+      <br><br>
+
+      <h3 class="title is-3" style="white-space: nowrap; text-align: center">Long Video</h3>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/long/v1.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/long/v2.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/long/v7.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/long/v10.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/long/v12.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/long/v13.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <br><br>
+      <h3 class="title is-3" style="white-space: nowrap; text-align: center">Varying Reconstruction Threshold</h3>
+      <p> The following videos show different MSE reconstruction thresholds for the same video. The left video uses a more strict threshold of 0.001,
+      which always requires all tokens due to the complexity of the video. The right video uses a higher threshold of 0.007 which is able to benefit
+      more from the adaptivity of ElasticTok.</p>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 49%; float: left;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+              <source src="./videos/thresholds/000000014_t01.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div style="width: 2%;"> </div>
+        <div style="width: 49%; float: right;">
+            <video width="100%" onloadstart="this.playbackRate = 0.75" loop playsinline muted controls="">
+            <source src="./videos/thresholds/000000014_t04.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
 
 </div>
 
